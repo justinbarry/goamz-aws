@@ -18,12 +18,13 @@ import (
 //
 // See http://goo.gl/d8BP1 for more details.
 type Region struct {
-	EC2Endpoint string
-	S3Endpoint  string
-	SDBEndpoint string
-	SNSEndpoint string
-	SQSEndpoint string
-	STSEndpoint string
+	EC2Endpoint      string
+	S3Endpoint       string
+	SDBEndpoint      string
+	SNSEndpoint      string
+	SQSEndpoint      string
+	STSEndpoint      string
+	DynamoDBEndPoint string
 }
 
 var USEast = Region{
@@ -33,6 +34,7 @@ var USEast = Region{
 	"https://sns.us-east-1.amazonaws.com",
 	"https://sqs.us-east-1.amazonaws.com",
 	"https://sts.amazonaws.com",
+	"https://dynamodb.us-east-1.amazonaws.com",
 }
 
 var USWest = Region{
@@ -42,6 +44,17 @@ var USWest = Region{
 	"https://sns.us-west-1.amazonaws.com",
 	"https://sqs.us-west-1.amazonaws.com",
 	"https://sts.amazonaws.com",
+	"dynamodb.us-west-1.amazonaws.com",
+}
+
+var USWest2 = Region{
+	"https://ec2.us-west-2.amazonaws.com",
+	"https://s3-us-west-2.amazonaws.com",
+	"https://sdb.us-west-2.amazonaws.com",
+	"https://sns.us-west-2.amazonaws.com",
+	"https://sqs.us-west-2.amazonaws.com",
+	"https://sts.amazonaws.com",
+	"https://dynamodb.us-west-2.amazonaws.com",
 }
 
 var EUWest = Region{
@@ -51,6 +64,7 @@ var EUWest = Region{
 	"https://sns.eu-west-1.amazonaws.com",
 	"https://sqs.eu-west-1.amazonaws.com",
 	"https://sts.amazonaws.com",
+	"https://dynamodb.eu-west-1.amazonaws.com",
 }
 
 var APSoutheast = Region{
@@ -60,6 +74,7 @@ var APSoutheast = Region{
 	"https://sns.ap-southeast-1.amazonaws.com",
 	"https://sqs.ap-southeast-1.amazonaws.com",
 	"https://sts.amazonaws.com",
+	"https://dynamodb.ap-northeast-1.amazonaws.com",
 }
 
 var APNortheast = Region{
@@ -69,6 +84,7 @@ var APNortheast = Region{
 	"https://sns.ap-northeast-1.amazonaws.com",
 	"https://sqs.ap-northeast-1.amazonaws.com",
 	"https://sts.amazonaws.com",
+	"https://dynamodb.ap-northeast-1.amazonaws.com",
 }
 
 type Auth struct {
